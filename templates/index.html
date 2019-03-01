@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+    {% if sz == 0 %}
+        <h3 style="padding:300px"> Список записей пуст</h3>
+    {% endif %}
+
+    {% for id, user_name, title, content, date in news%}
+        <div>
+            <div>
+                <h2> {{title}} </h2>
+            </div>
+
+             <div>
+                <h6> {{content}} </h6>
+            </div>
+            <a href="/del/{{id}}">
+               <h5 style="color:black"> Удалить</h5>
+                </a>
+            <br/>
+
+        </div>
+    {% endfor %}
+
+{% endblock %}

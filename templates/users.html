@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <div>
+  <table border="1" width="100%" cellpadding="5" >
+
+       <th>ID</th>
+      <th>USER_NAME</th>
+      <th>PASSWORD</th>
+      <th>Количество заметок</th>
+
+    {% for id, user_name, password, count in users%}
+      <tr>
+          <th>{{id}}</th>
+          <th>{{user_name}}</th>
+          <th>{{password}}</th>
+          <th>{{count}}</th>
+    </tr>
+
+
+    {% endfor %}
+       </table>
+    </div>
+      {% endblock %}
